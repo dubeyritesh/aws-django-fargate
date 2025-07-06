@@ -47,6 +47,3 @@ module "alb" {
   project_name      = var.project_name
 }
 
-output "alb_dns_name" {
-  value = module.alb.dns_name
-}

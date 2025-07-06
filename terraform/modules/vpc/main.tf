@@ -42,7 +42,10 @@ resource "aws_internet_gateway" "igw" {
 
 # Elastic IP for NAT Gateway
 resource "aws_eip" "nat" {
-  vpc = true
+  # Just leave the block empty, or set tags if needed
+  tags = {
+    Name = "nat-eip"
+  }
 }
 
 # NAT Gateway for Private Subnets
